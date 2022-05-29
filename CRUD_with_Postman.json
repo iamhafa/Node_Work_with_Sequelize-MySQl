@@ -1,0 +1,259 @@
+{
+	"info": {
+		"_postman_id": "3861e189-f4b0-41ed-82ab-375c38de2816",
+		"name": "SangNC2 - Sequelize",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18149326"
+	},
+	"item": [
+		{
+			"name": "REST Customer",
+			"item": [
+				{
+					"name": "POST new Customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerNumber\": 2,\r\n    \"customerName\": \"Nguyen Sang\",\r\n    \"contactLastName\": \"Sang\",\r\n    \"contactFirstName\": \"Nguyen\",\r\n    \"phone\": \"363645756\",\r\n    \"addressLine1\": \"BacTuLiemrhdt\",\r\n    \"addressLine2\": \"Maegrvfsgerd\",\r\n    \"city\": \"Washington\",\r\n    \"state\": \"DCaevsg\",\r\n    \"postalCode\": \"20001\",\r\n    \"country\": \"USA\",\r\n    \"salesRepEmployeeNumber\": null,\r\n    \"creditLimit\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Customer by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"creditLimit\": 5476\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/customers/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"customers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Customer by ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerName\": \"Nguyen Sang\",\r\n    \"customerLastName\": \"Sang\",\r\n    \"customerFirstName\": \"Nguyen\",\r\n    \"phone\": \"363645756\",\r\n    \"addressLine1\": \"BacTuLiemrhdt\",\r\n    \"addressLine2\": \"M\",\r\n    \"city\": \"Washington\",\r\n    \"state\": \"DCaevsg\",\r\n    \"postalCode\": \"20001\",\r\n    \"country\": \"USA\",\r\n    \"salesRepEmployeeNumber\": null,\r\n    \"creditLimit\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/customers/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"customers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Customer by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/employees/999",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"employees",
+								"999"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "REST Employee",
+			"item": [
+				{
+					"name": "POST new Employees",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"employeeNumber\": 1,\r\n    \"firstName\": \"Nguyen\",\r\n    \"lastName\": \"Sang\",\r\n    \"extension\": \"Cao\",\r\n    \"email\": \"sang@gmail.com\",\r\n    \"officeCode\": \"2\",\r\n    \"reportsTo\": null,\r\n    \"jobTitle\": \"President\",\r\n    \"customers\": [\r\n    {\r\n        \"customerNumber\": 1,\r\n        \"customerName\": \"\",\r\n        \"contactLastName\": \"\",\r\n        \"contactFirstName\": \"Nguyen\",\r\n        \"phone\": \"363645756\",\r\n        \"addressLine1\": \"BacTuLiemrhdt\",\r\n        \"addressLine2\": \"Maeaelkgrhsul\",\r\n        \"city\": \"Washington\",\r\n        \"state\": \"DCaevsg\",\r\n        \"postalCode\": \"20001\",\r\n        \"country\": \"USA\",\r\n        \"salesRepEmployeeNumber\": null,\r\n        \"creditLimit\": 100\r\n    }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/employees",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Employee by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/employees/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"employees",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Employee by ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"employeeNumber\": 1,\r\n    \"firstName\": \"Nguyen\",\r\n    \"lastName\": \"Sang\",\r\n    \"extention\": \"Cao\",\r\n    \"email\": \"sang@gmail.com\",\r\n    \"officeCode\": null,\r\n    \"reportsTo\": null,\r\n    \"jobTitle\": \"President\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/employees/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"employees",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Employee by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/employees/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"employees",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Report",
+			"item": [
+				{
+					"name": "GET reports",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/reports",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"reports"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
